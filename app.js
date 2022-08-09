@@ -22,55 +22,38 @@
  * Define Global Variables
  * 
 */
-const navBar = document.querySelectorAll('.navbar__menu');
-let navList = document.querySelectorAll('#navbar__list');
-const sections = document.querySelectorAll('seection');
-const header = document.querySelector('page__header')
-const footer = querySelector('footer');
+const sections = Array.from(document.querySelectorAll('sections'));
+const menu = document.getElementById("NavBar__list");
+const numberOfListItems = sections.length;
+
+//below Function & for loop in order to assign name of each section into the array above.// 
+function createListItem(){
+    for (section of sections) {
+        sectionName = section.getAttribute("data-nav");
+        listItem = document.createElement("li");
+
+        createListItem.innerHTML = `<a class= 'menu__link' href=#${sectionLink}'.$sectionName}</a>`;
+
+        menu.appendChild(listItem);
+    }
+}
+
+createListItem();
+
+function toggleNavBar(){
+    let userScroll;
+    //Default Settings for NavBar while scrolling
+    header.style.cssText = 'opacity: 1; transition: ease 0.3s ;';
+    window.clearTimeout( userScroll );
+    //The Timeout to run after scrolling ends
+    userScroll = setTimeout(function() {
+        //The Settings Executed on NavBar after Timeout finished
+        header.style.cssText = 'opacity: .60; transition: ease 0.3s ;'
+    }, 6000);
+}
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
 */
-function buildNav(){
-    sections.forEach(section=>{
-        let NavButton = Document.createElement('li');
-        navButton.insertAdjacentHTML("afterBegin",`<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`);
-        navList.appendChild(navButton);
-
-        scrollBehavior(navButton, section);
-    });
-
-}
-
-buildNav();
-
-
-
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
-*/
-
-// build the nav
-
-
-// Add class 'active' to section when near top of viewport
-
-
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- * 
-*/
-
-// Build menu 
-
-// Scroll to section on link click
-
-// Set sections as active
