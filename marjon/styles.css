@@ -57,7 +57,7 @@ section {
     background-image: url(../marjon/images/bucks.jpg);
     opacity: .85;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     height: 850px;
     width: 1500px;
 }
