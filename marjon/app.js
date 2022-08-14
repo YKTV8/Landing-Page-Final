@@ -72,13 +72,13 @@ window.addEventListener('scroll', smoothScroll); {
 };
 
 window.addEventListener('scroll', function(){
-    paraElems.forEach(function(paraElem)){
+    paraElems.forEach(function(paraElem){
         const pos = paraElem.getBoundingClientRect();
         const isInViewport = pos.top > 0 && pos.top < window.innerHeight;
     if (isInViewport) {
         paraElem.classlist.add('active-section');
     }
-    }
+    })
 })
 
 
