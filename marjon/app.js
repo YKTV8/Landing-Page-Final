@@ -60,6 +60,29 @@ function activeSection(){
 }
 function toggleNavBar(){}
 
+//
+const scrolling = () =>{
+    const links = document.querySelectorAll('.navbar__menu');
+    links.forEach(link => {
+        link.addEventListener('click', () =>{
+            for(i = 0; i< sections ; i++){
+                sections[i].addEventListener("click", sectionScroll(link));
+            }
+        });
+    });
+};
+
+
+scrolling();
+/*function sectionInViewPort (view) {
+    let sectionPos = elem.getBoundingClientRect();
+    return (sectionPos.top >= 0);
+}
+function toggleActiveClass(){
+    for (section of sections) {
+
+    }
+}*/
 window.addEventListener('scroll', smoothScroll); {
     function smoothScroll(){
         sections.forEach(section =>{

@@ -1,5 +1,7 @@
 body {
     background: url(../marjon/images/greenmarjon.jpg);
+    width: 100vw;
+    height:100vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,18 +33,24 @@ h2 {
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
     color: #fff;
+    background-color: rgba(123, 0, 125, .80);
+    margin-right: 60%;
 }
 
 p {
-    line-height: 1.6em;
+    line-height: 2.1em;
     color: #eee;
+    background-color: rgba(123, 0, 125, .80);
+    margin-right: 80%;
 }
 
 /* ---- Layout Rules ---- */
 main {
-    margin: 10vh 1em 10vh;
+    margin: 10vh 1em 100vh;
 }
-
+.active-section{
+    background-color: #333;
+}
 .main-hero {
     min-height: 40vh;
     padding-top: 3em;
@@ -52,7 +60,51 @@ section {
     position: relative;
     min-height: 80vh;
 }
-
+#section1{
+    background-image: url(../marjon/images/dream2.jpg);
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 1500px;
+    background-position-x: left;
+}
+#section2{
+    background-image: url(../marjon/images/struggle.jpg);
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 1500px;
+    background-position-x: left;
+}
+#section3{
+    background-image: url(../marjon/images/journey4.jpg);
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 1500px;
+    background-position-x: left;
+}
+#section4{
+    background-image: url(../marjon/images/proday2.jpg);
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 1500px;
+    background-position-x: left;
+}
+#section5{
+    background-image: url(../marjon/images/draftday.jpg);
+    opacity: .85;
+    background-repeat: no-repeat;
+    background-position: top;
+    height: 1000px;
+    width: 1500px;
+    background-position-x: left;
+}
 #section6{
     background-image: url(../marjon/images/bucks.jpg);
     opacity: .85;
@@ -61,18 +113,29 @@ section {
     height: 850px;
     width: 1500px;
 }
+.overlay{
+   width: 1180px;
+   opacity: .85;
+   padding-left: 25px;
+   margin-right: 690px;
+}
+.overlay1{
+    width: 1180px;
+    opacity: .85;
+    padding-left: 25px;
+}
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
 .img{
-    height: 600px;
-    width: 500px;
+    height: 1000px;
+    width: 900px;
 }
 .navbar__menu ul {
     background-color: rgb(125, 0, 125);
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: left;
 }
 
 .navbar__menu li {
@@ -94,8 +157,7 @@ section {
 }
 
 /* Header Styles */
-.page__header {
-    background: #fff;
+.page1_header {
     position: fixed;
     top: 0;
     width: 100%;
@@ -200,8 +262,8 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: rgb(15, 200, 125);
+    background: linear-gradient(0deg, rgba(15, 200, 125, 0.1) 0%, rgba(15, 200, 125, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
