@@ -3,6 +3,8 @@ const navBar = document.querySelector('.navbar__menu');
 const navListUL = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 
+const paraElems = document.querySelectorAll('p');
+
 
 /*const sections = Array.from(document.querySelectorAll('sections'));
 *const menu = document.getElementById("NavBar__list");
@@ -48,7 +50,7 @@ function activeSection(){
     const navActive = document.querySelectorAll(".menu__link")
     sections.forEach((section, i)=>{
     const sectionBond = section.getBoundingClientRect();
-        if (sectionBond.top <= 380 && sectionBond.bottom >= 350){
+        if (sectionBond.top <= 0 && sectionBond.bottom >= 350){
             section.classlist.add("your-active-class");
             navActive[i].classList.add(active_button);
         } else{
@@ -72,11 +74,11 @@ window.addEventListener('scroll', smoothScroll); {
 };
 
 window.addEventListener('scroll', function(){
-    paraElems.forEach(function(paraElem){
-        const pos = paraElem.getBoundingClientRect();
+    paraElems.forEach(function(paraElems){
+        const pos = paraElems.getBoundingClientRect();
         const isInViewport = pos.top > 0 && pos.top < window.innerHeight;
     if (isInViewport) {
-        paraElem.classlist.add('active-section');
+        paraElems.classlist.add('active-section');
     }
     })
 })
