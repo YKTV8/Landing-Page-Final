@@ -1,16 +1,15 @@
-/**
- * Define Global Variables
- * 
-*/
+
 const navBar = document.querySelector('.navbar__menu');
 const navListUL = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
 
+const paraElems = document.querySelectorAll('p');
 
-//const sections = Array.from(document.querySelectorAll('sections'));
-//const menu = document.getElementById("NavBar__list");
-//const numberOfListItems = sections.length;
-// Construct the navbar
+
+/*const sections = Array.from(document.querySelectorAll('sections'));
+*const menu = document.getElementById("NavBar__list");
+*const numberOfListItems = sections.length;
+ Construct the navbar*/
 
 function buildNav() {
     for (let index = 0; index <Array.length; index++) {
@@ -39,19 +38,21 @@ function scrollBehavior(navButton,section){
     navButton.addEventListener('click', function(event){
         event.preventDefault();
         window.scrollTo({
-            top: section.offsetTop, behavior: "smooth"
+            top: section.offsetTop, 
+            behavior: "smooth"
         })
     })
 }
+//
 
 //
 function activeSection(){
     const navActive = document.querySelectorAll(".menu__link")
     sections.forEach((section, i)=>{
     const sectionBond = section.getBoundingClientRect();
-        if (sectionBond.top <= 380 && sectionBond.bottom >= 350){
+        if (sectionBond.top <= 0 && sectionBond.bottom >= 350){
             section.classlist.add("your-active-class");
-            navACtive[i].classList.add(active_button);
+            navActive[i].classList.add(active_button);
         } else{
             section.classList.remove("your-active-class");
             navActive[i].classList.remove("active_button")
@@ -94,6 +95,19 @@ window.addEventListener('scroll', smoothScroll); {
     toggleNavBar();
 }
 };
+
+window.addEventListener('scroll', function(){
+    paraElems.forEach(function(paraElems){
+        const pos = paraElems.getBoundingClientRect();
+        const isInViewport = pos.top > 0 && pos.top < window.innerHeight;
+    if (isInViewport) {
+        paraElems.classlist.add('active-section');
+    }
+    })
+})
+
+
+
 //below Function & for loop in order to assign name of each section into the array above.// 
 /*function createListItem(){
     for (section of sections) {
