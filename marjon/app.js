@@ -1,15 +1,15 @@
-
+//DEFINE GLOBAL VARIABLE
 const navBar = document.querySelector('.navbar__menu');
 const navListUL = document.querySelector('#navbar__list');
 const sections = document.querySelectorAll('section');
-
 const paraElems = document.querySelectorAll('p');
-
 
 /*const sections = Array.from(document.querySelectorAll('sections'));
 *const menu = document.getElementById("NavBar__list");
-*const numberOfListItems = sections.length;
- Construct the navbar*/
+*const numberOfListItems = sections.length;*/
+
+
+//CONSTRUCT NAVBAR DYNAMICALLY
 
 function buildNav() {
     for (let index = 0; index <Array.length; index++) {
@@ -29,24 +29,26 @@ function buildNav() {
     navBar.appendChild(navListUL);
 }
 
-buildNav();
-//
-listItem = document.createElement('li');
+//buildNav();
+//CONFIRM VIEWPORT AND CREATING ACTIVE CLASS
+const sectionInViewport = (view) =>{
+    let sectionTop = view.getBoundingClientRect();
+    return sectionTop.top <= 150 && sectionTop.bottom >= 150;
+};
 
-navBar.appendChild(listItem);
-function scrollBehavior(navButton,section){
-    navButton.addEventListener('click', function(event){
-        event.preventDefault();
-        window.scrollTo({
-            top: section.offsetTop, 
-            behavior: "smooth"
-        })
-    })
-}
-//
+const activeSection = () => {
+    for (section of sections){
+        if (sectionInViewport(section)) {
+            if(!section.classList.contains("your-active-class")) {
+                section.classList.add("your-active-class");
+            }
+        } else {
+            section.classList.remove("your-active-class");
+        }
+    }
+};
 
-//
-function activeSection(){
+/*function activeSection(){
     const navActive = document.querySelectorAll(".menu__link")
     sections.forEach((section, i)=>{
     const sectionBond = section.getBoundingClientRect();
@@ -59,22 +61,38 @@ function activeSection(){
         }
     })
 }
-function toggleNavBar(){}
+function toggleNavBar(){}*/
 
-//
-const scrolling = () =>{
-    const links = document.querySelectorAll('.navbar__menu');
-    links.forEach(link => {
-        link.addEventListener('click', () =>{
-            for(i = 0; i< sections ; i++){
+
+listItem = document.createElement('li');
+
+navBar.appendChild(listItem);
+function scrollBehavior(navButton,section){
+    navButton.addEventListener('click', function(event){
+        event.preventDefault();
+        window.scrollTo({
+            top: section.offsetTop,
+            behavior: "smooth"
+        })
+    })
+}
+//CREATING SMOOTH SCROLL
+/*const scrolling = () => {
+    document.querySelectorAll('.navbar__menu').forEach((link) => {
+        link.addEventListener('click', function (j) {
+            j.preventDefault();
+            document.querySelector(link.getAttribute('href')).scrolling({
+                behavior: "smooth",
+            });
+            /*for(i = 0; i< sections ; i++){
                 sections[i].addEventListener("click", sectionScroll(link));
-            }
+            }*
         });
     });
-};
+};*/
 
 
-scrolling();
+scrollTo();
 /*function sectionInViewPort (view) {
     let sectionPos = elem.getBoundingClientRect();
     return (sectionPos.top >= 0);
@@ -91,23 +109,31 @@ window.addEventListener('scroll', smoothScroll); {
             const link = document.querySelector(`a[href = "#${section.id}"]`)
         })
 
-    activeSection();
-    toggleNavBar();
+    //activeSection();
+    //toggleNavBar();
 }
 };
 
 window.addEventListener('scroll', function(){
     paraElems.forEach(function(paraElems){
         const pos = paraElems.getBoundingClientRect();
-        const isInViewport = pos.top > 0 && pos.top < window.innerHeight;
+        const isInViewport = pos.top <= 150 && pos.top >= window.innerHeight;
     if (isInViewport) {
         paraElems.classlist.add('active-section');
     }
     })
 })
 
+//BUILD THE NAVBAR MENU
+
+ buildNav();
+
+ //SMOOTH SCROLL TO SECTION
+
+ smoothScroll();
 
 
+// document.addEventListener("scroll", activeSection);
 //below Function & for loop in order to assign name of each section into the array above.// 
 /*function createListItem(){
     for (section of sections) {
