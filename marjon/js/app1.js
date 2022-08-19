@@ -1,7 +1,8 @@
 //DEFINE GLOBAL VARIBLE
-const navBar = document.querySelectorAll('.navbar__menu');
+const navBar = document.querySelector('.navbar__menu');
 const navListUL = document.querySelector('#navbar__list');
 //const paraElems = documents.querySelectorAll('p');
+const sections = document.querySelectorAll('section');
 let section = Array.from(document.querySelectorAll('section'));
 
 
@@ -26,18 +27,20 @@ section.forEach(section=>{
 window.addEventListener("scroll", function (z){``
 section.forEach (function(section){
     const topOfSect = section.getBoundingClientRect().top;
-    if(topOfSect >= 0 && topOfSect <350){
+
+    if(topOfSect => 150 && topOfSect <350){
         section.classList.add('your-active-class');
-    }else {section.classList.remove('your-active-class');
+    } else { 
+        section.classList.remove('your-active-class');
     }
     });
 });
-
+/*
 //CONFIRM VIEWPORT AND CREATING ACTIVE CLASS
 const sectionInViewport = () =>{
     const sections = sections.getBoundingClientRect();
-    return sections.top > 0 && sections.bottom < 150;
-};
+    return sections.top > 0 && sections.bottom > 550;
+};*/
 
 const activeSection = () => {
     for (let menu__link of sections){

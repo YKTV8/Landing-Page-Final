@@ -1,5 +1,5 @@
 body {
-    background: url(../marjon/images/greenmarjon.jpg);
+    background: url(/marjon/images/greenmarjon.jpg);
     width: 100vw;
     height:100vh;
     height: 60vh;
@@ -43,7 +43,7 @@ p {
     color: #eee;
     background-color: rgba(123, 0, 125, .80);
     margin-right: 80%;
-    width: 880px;
+    width: 350px;
     font-size: 1.9em;
 
 }
@@ -69,7 +69,7 @@ section {
 }
 #section1{
     background-image: url(../marjon/images/dream2.jpg);
-    opacity: .85;
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
@@ -78,7 +78,7 @@ section {
 }
 #section2{
     background-image: url(../marjon/images/struggle.jpg);
-    opacity: .85;
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
@@ -87,7 +87,7 @@ section {
 }
 #section3{
     background-image: url(../marjon/images/journey4.jpg);
-    opacity: .85;
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
@@ -96,7 +96,7 @@ section {
 }
 #section4{
     background-image: url(../marjon/images/proday2.jpg);
-    opacity: .85;
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
@@ -105,14 +105,14 @@ section {
 }
 #section5{
     background-image: url(../marjon/images/draftday.jpg);
-    opacity: .85;
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
     width: 1500px;
     background-position-x: left;
 }
-.overlay{
+/*.overlay{
     background-color: rgb(83, 80, 83);;
     width: 1180px;
     opacity: .85;
@@ -147,11 +147,11 @@ section {
     width: 1000px;
     opacity: .85;
     padding-left: 25px;
-}
+}*/
 
 #section6{
     background-image: url(../marjon/images/bucks.jpg);
-    opacity: .85;
+    opacity: .90;
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: top;
@@ -159,23 +159,27 @@ section {
     height: 850px;
     width: 1500px;
 }
+html {
+    scroll-behavior: smooth;
+}
 .overlay{
    width: 1180px;
-   opacity: .85;
+   opacity: .45;
    padding-left: 25px;
    margin-right: 690px;
 }
 .overlay1{
     width: 1180px;
-    opacity: .85;
+    opacity: 1;
     padding-left: 25px;
 }
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
 .img{
+    
     height: 1000px;
-    width: 900px;
+    width: 850px;
 }
 .navbar__menu ul {
     background-color: rgb(125, 0, 125);
