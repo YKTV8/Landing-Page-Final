@@ -53,10 +53,10 @@ main {
     margin: 10vh 1em 100vh;
 }
 .active-section{
-    background-color: #333;
+    background-color: rgb(25, 165, 17);
 }
 .active-section{
-    background-color: #333;
+    background-color: rgb(25, 165, 17);
 }
 .main-hero {
     min-height: 40vh;
