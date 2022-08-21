@@ -1,24 +1,26 @@
 //DEFINE GLOBAL VARIABLE
 const navBar = document.querySelector('.navbar__menu');
 const navListUL = document.querySelector('#navbar__list');
-const sections = document.querySelectorAll('section');
+//const sections = document.querySelectorAll('section');
 const paraElems = document.querySelectorAll('p');
+listItem = document.createElement('li');
 
-/*const sections = Array.from(document.querySelectorAll('sections'));
-*const menu = document.getElementById("NavBar__list");
+let section = Array.from(document.querySelectorAll('section'));
+/*const menu = document.getElementById("NavBar__list");
 *const numberOfListItems = sections.length;*/
 
 
 //CONSTRUCT NAVBAR DYNAMICALLY
 
+
 function buildNav() {
     for (let index = 0; index <Array.length; index++) {
-        const element = array[index];
+        const element = Array[index];
     }
 }
 //
-function buildNav() {
-    sections.forEach(section=>{
+/*function buildNav() {
+    section.forEach(section=>{
         const navButton = document.createElement('li');
         navButton.insertAdjacentHTML("afterBegin",`<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`);
         navListUL.appendChild(navButton);
@@ -27,23 +29,24 @@ function buildNav() {
     });
 
     navBar.appendChild(navListUL);
-}
+}*/
 
 //buildNav();
 //CONFIRM VIEWPORT AND CREATING ACTIVE CLASS
 const sectionInViewport = (view) =>{
-    let sectionTop = view.getBoundingClientRect();
-    return sectionTop.top <= 150 && sectionTop.bottom >= 150;
+    const sections = sections.getBoundingClientRect();
+    return sections.top <= 150 && sections.bottom >= 150;
 };
 
+
 const activeSection = () => {
-    for (section of sections){
-        if (sectionInViewport(section)) {
-            if(!section.classList.contains("your-active-class")) {
-                section.classList.add("your-active-class");
+    for (let menu__link of sections){
+        if (sectionInViewport(sections)) {
+            if(!sections.classList.contains("your-active-class")) {
+                sections.classList.add("your-active-class");
             }
         } else {
-            section.classList.remove("your-active-class");
+            sections.classList.remove("your-active-class");
         }
     }
 };
@@ -64,7 +67,7 @@ const activeSection = () => {
 function toggleNavBar(){}*/
 
 
-listItem = document.createElement('li');
+//listItem = document.createElement('li');
 
 navBar.appendChild(listItem);
 function scrollBehavior(navButton,section){
@@ -95,24 +98,20 @@ function scrollBehavior(navButton,section){
 scrollTo();
 /*function sectionInViewPort (view) {
     let sectionPos = elem.getBoundingClientRect();
-    return (sectionPos.top >= 0);
-}
-function toggleActiveClass(){
-    for (section of sections) {
-
-    }
+    return (sectionPos.top >= 150);
 }*/
-window.addEventListener('scroll', smoothScroll); {
+
+//window.addEventListener('scroll', smoothScroll); {
     function smoothScroll(){
         sections.forEach(section =>{
             const sectionTop = section.getBoundingClientRect().top;
             const link = document.querySelector(`a[href = "#${section.id}"]`)
         })
 
-    //activeSection();
-    //toggleNavBar();
+    activeSection();
+    //sectionInViewPort();
 }
-};
+//};
 
 window.addEventListener('scroll', function(){
     paraElems.forEach(function(paraElems){
