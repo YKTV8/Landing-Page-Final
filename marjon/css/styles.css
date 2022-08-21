@@ -10,8 +10,17 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-
-
+p {
+    display: grid;
+    width:120px;
+    background-color: rgba(25, 165, 17, .85);
+    margin-top: 100px;
+    align-content: right;
+}
+.flex_container{
+    display: block;
+    width: 100vw;
+}
 /* Typeography General*/
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -37,24 +46,6 @@ h2 {
     background-color: rgba(123, 0, 125, .80);
     margin-right: 60%;
 }
-
-.p {
-    line-height: 2.1em;
-    color: #eee;
-    background-color: rgba(123, 0, 125, .80);
-    margin-right: 80%;
-    width: 880px;
-    font-size: 1.9em;
-    white-space: nowrap;
-    position: absolute;
-    overflow: hidden;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-
-}
-
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 100vh;
@@ -75,7 +66,7 @@ section {
     min-height: 80vh;
 }
 #section1{
-    /*background-image: url(../marjon/images/dream2.jpg);*/
+    background-image: url(/marjon/images/dream2.jpg);
     opacity: .85;
     background-repeat: no-repeat;
     background-position: top;
@@ -84,7 +75,7 @@ section {
     background-position-x: left;
 }
 #section2{
-    /*background-image: url(../marjon/images/struggle.jpg);*/
+    background-image: url(/marjon/images/struggle.jpg);
     opacity: .85;
     background-repeat: no-repeat;
     background-position: top;
@@ -93,7 +84,7 @@ section {
     background-position-x: left;
 }
 #section3{
-    /*background-image: url(../marjon/images/journey4.jpg);*/
+    background-image: url(/marjon/images/journey4.jpg);
     opacity: .85;
     background-repeat: no-repeat;
     background-position: top;
@@ -102,7 +93,7 @@ section {
     background-position-x: left;
 }
 #section4{
-    /*background-image: url(../marjon/images/proday2.jpg);*/
+    background-image: url(/marjon/images/proday2.jpg);
     opacity: .85;
     background-repeat: no-repeat;
     background-position: top;
@@ -111,7 +102,7 @@ section {
     background-position-x: left;
 }
 #section5{
-    /*background-image: url(../marjon/images/draftday.jpg);*/
+    background-image: url(/marjon/images/draftday.jpg);
     opacity: .85;
     background-repeat: no-repeat;
     background-position: top;
@@ -194,9 +185,8 @@ section {
     overflow: hidden;
     width: 0;
     height: 100%;
-    transition: .5s ease;
+    transition: 1s ease;
     position: relative;
-    width: 50%;
     width: 1180px;
     opacity: .85;
     padding-left: 25px;
@@ -209,10 +199,10 @@ section {
 /* Navigation Styles*/
 .img{
     display: block;
-    width: 100%;
-    height: auto;
-    /*height: 1000px;
-    width: 900px;*/
+    /*width: 100%;
+    height: auto;*/
+    height: 1000px;
+    width: 900px;
     border-style: solid;
     border-color: rgb(5, 125, 105);
 }

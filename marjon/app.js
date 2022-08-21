@@ -69,7 +69,7 @@ function toggleNavBar(){}*/
 
 //listItem = document.createElement('li');
 
-navBar.appendChild(listItem);
+navBar.appendChild(istIltem);
 function scrollBehavior(navButton,section){
     navButton.addEventListener('click', function(event){
         event.preventDefault();

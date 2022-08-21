@@ -24,7 +24,7 @@ section.forEach(section=>{
 
 //navBar.appendChild(navListUL);
 
-window.addEventListener("scroll", function (z){``
+window.addEventListener("scroll", function (z){
 section.forEach (function(section){
     const topOfSect = section.getBoundingClientRect().top;
 
