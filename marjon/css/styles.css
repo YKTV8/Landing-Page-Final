@@ -49,9 +49,7 @@ h2 {
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 100vh;
-}
-.active-section{
-    background-color: rgb(25, 165, 17);
+
 }
 .active-section{
     background-color: rgb(25, 165, 17);
@@ -73,6 +71,7 @@ section {
     height: 1000px;
     width: 1500px;
     background-position-x: left;
+    
 }
 #section2{
     background-image: url(/marjon/images/struggle.jpg);
@@ -82,6 +81,7 @@ section {
     height: 1000px;
     width: 1500px;
     background-position-x: left;
+    
 }
 #section3{
     background-image: url(/marjon/images/journey4.jpg);
@@ -91,6 +91,7 @@ section {
     height: 1000px;
     width: 1500px;
     background-position-x: left;
+    
 }
 #section4{
     background-image: url(/marjon/images/proday2.jpg);
@@ -100,6 +101,7 @@ section {
     height: 1000px;
     width: 1500px;
     background-position-x: left;
+    
 }
 #section5{
     background-image: url(/marjon/images/draftday.jpg);
@@ -109,6 +111,7 @@ section {
     height: 1000px;
     width: 1500px;
     background-position-x: left;
+    
 }
 .overlay{
     background-color: rgb(83, 80, 83);;
@@ -123,6 +126,7 @@ section {
     width: 1180px;
     opacity: .85;
     padding-left: 25px;
+    margin-top: 25px;
 }
 .overlay2{
     background-color: rgb(83, 80, 83);
@@ -207,20 +211,20 @@ section {
     border-color: rgb(5, 125, 105);
 }
 .navbar__menu ul {
-    background-color: rgb(125, 0, 125);
+    /*background-color: rgb(125, 0, 125);*/
     padding-left: 0;
     margin: 0;
     text-align: left;
-    text-align: center;
+    font-size: 25px;
 }
-
 .navbar__menu li {
     display: inline-block;
 }
 
 .navbar__menu .menu__link {
     display: block;
-    padding: 1em;
+    background: rgb(125, 0, 125);
+    padding: 2em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
@@ -279,7 +283,7 @@ section:nth-of-type(even) .landing__container {
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
     content: '';
-    background: rgba(255, 255, 255, 0.187);
+    background: rgba(15, 200, 125, 0.187);
     position: absolute;
     z-index: -5;
     width: 20vh;
@@ -292,7 +296,7 @@ section:nth-of-type(odd) .landing__container::before {
 section:nth-of-type(even) .landing__container::before {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -307,7 +311,7 @@ section:nth-of-type(even) .landing__container::before {
 section:nth-of-type(3n) .landing__container::after {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -322,7 +326,7 @@ section:nth-of-type(3n) .landing__container::after {
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -340,7 +344,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(15, 200, 125);
-    background: linear-gradient(0deg, rgba(15, 200, 125, 0.1) 0%, rgba(15, 200, 125, 0) 100%);
+    /*background: linear-gradient(0deg, rgba(15, 200, 125, 0.1) 0%, rgba(15, 200, 125, 0) 100%);*/
 }
 
 section.your-active-class .landing__container::before {
