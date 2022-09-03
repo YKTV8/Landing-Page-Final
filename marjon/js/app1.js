@@ -1,9 +1,8 @@
 //DEFINE GLOBAL VARIBLE
 
 //NavBar selection & const sections [sec1 thru sec6]
-const navListUL = document.getElementById("navbar__list");
 const sections = document.querySelectorAll("section");
-
+const navListUL = document.getElementById("navbar__list");
 const navBar = document.querySelector(".navbar__menu");
 
 //const navListUL = document.querySelector("#navbar__list");
@@ -12,12 +11,65 @@ const navBar = document.querySelector(".navbar__menu");
 //const section = Array.from(sections);
 
 //CONSTRUCT NAVBAR DYNAMICALLY
-
-/*function buildNav() {
-    for (let index = 0; index <Array.length; index++) {
+for (let index = 0; index <Array.length; index++) {
         const element = Array[index];
+    
+        const buildNav = () => {
+            let navbar__menu = '';
+        
+            sections.forEach(section=>{
+                const navBar = document.createElement("li");
+                navBar.insertAdjacentHTML("afterBegin",`<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`);
+                navListUL.appendChild(navBar);
+            });
+        
+            navigation.innerHTML = navBar;
+        };
+        //CONFIRM VIEWPORT AND CREATING ACTIVE CLASS
+        
+        const offset = (section) =>{
+            return Math.floor(section.getBoundingClientRect().top);
+        };
+        
+        const removeActive = (section) => {
+            section.classList.remove('your-active-section');
+            section.style.cssText = "background-color: rgb(125, 0, 125);";
+        };
+        
+        const addActive = (conditional, section) => {
+            if(conditional){
+            section.classList.add('your-active-section');
+            section.style.cssText = "background-color: rgb(15, 200, 125);";
+            };
+        };
+        
+        const activeSection = () => {
+            sections.forEach(section => {
+                const elementOffset = offset(section);
+        
+                inViewport = () => elementOffset < 250 && elementOffset >= -850;
+        
+                removeActive(section);
+                addActive(inViewport(),section);
+                });
+        };
+        window.addEventListener("click", activeSection);
+    
+    
+    
+    
+    
+    
+    
+    buildNav();
+    
+    
+    
+    
+    
+    
     };
-};*/
+/*
 const buildNav = () => {
     let navbar__menu = '';
 
@@ -57,7 +109,7 @@ const activeSection = () => {
         addActive(inViewport(),section);
         });
 };
-window.addEventListener("scroll", activeSection);
+window.addEventListener("scroll", activeSection);  added to line 17- 56*/
 //navBar.appendChild(navListUL);
 /**function scrollBehavoir(navButton,sections){
     navButton,addEventListener("click", function(event){
@@ -76,8 +128,8 @@ const smoothScroll = () =>{
 
     const sect = document.querySelectorAll("navbar__menu");
     sect.forEach((sect)=> {
-        sect.addEventListener("click", () => {
-            preventDefault ();
+        sect.addEventListener("click", function(event) {
+            event.preventDefault ();
             document.querySelector(anchor.getAttribute("href")).scrollIntoView({
                 behavior: "smooth",
             });
@@ -101,11 +153,11 @@ window.addEventListener("scroll" , function(){
         paraElems.classList.add('active-section');
     }
     })
-})*/
+})**/
 
 //BUILD THE NAVBAR
 
-buildNav();
+//buildNav();
 
 //SMOOTH SCROLL TO SECTION
 

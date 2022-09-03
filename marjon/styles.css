@@ -65,76 +65,77 @@ main {
 
 section {
     position: relative;
-    min-height: 80vh;
+    min-height: 20vh;
 }
 #section1{
     /*background-image: url(../marjon/images/dream2.jpg);*/
-    opacity: .85;
+    opacity: .95;
     background-image: url(../marjon/images/dream2.jpg);
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
-    width: 1500px;
-    background-position-x: left;
+    width: 1200px;
+    background-position-x: right;
 }
 #section2{
     /*background-image: url(../marjon/images/struggle.jpg);*/
-    opacity: .85;
+    opacity: .95;
     background-image: url(../marjon/images/struggle.jpg);
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
-    width: 1500px;
+    width: 1200px;
     background-position-x: left;
 }
 #section3{
     /*background-image: url(../marjon/images/journey4.jpg);*/
-    opacity: .85;
+    opacity: .95;
     background-image: url(../marjon/images/journey4.jpg);
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
-    width: 1500px;
-    background-position-x: left;
+    width: 1200px;
+    background-position-x: right;
 }
 #section4{
     /*background-image: url(../marjon/images/proday2.jpg);*/
-    opacity: .85;
+    opacity: .95;
     background-image: url(../marjon/images/proday2.jpg);
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
     height: 1000px;
-    width: 1500px;
+    width: 1200px;
     background-position-x: left;
 }
 #section5{
     /*background-image: url(../marjon/images/draftday.jpg);*/
-    opacity: .85;
+    opacity: .95;
     background-image: url(../marjon/images/draftday.jpg);
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 1000px;
-    width: 1500px;
-    background-position-x: left;
+    height: min-content;
+    width: 900px;
+    background-position-x: right;
 }
+
 /*.overlay{
     background-color: rgb(83, 80, 83);;
     width: 1180px;
     opacity: .85;
     padding-left: 25px;
-}
+}*/
 .overlay1{
     background-color: rgb(125, 0, 125);
     width: 1180px;
-    opacity: .85;
+    opacity: .80;
     padding-left: 25px;
 }
-.overlay2{
+/*.overlay2{
     background-color: rgb(83, 80, 83);
     width: 1180px;
     opacity: .85;
@@ -172,13 +173,13 @@ section {
 html {
     scroll-behavior: smooth;
 }
-.overlay{
+.overlay1{
    width: 1180px;
-   opacity: .45;
+   opacity: .94;
    padding-left: 25px;
    margin-right: 690px;
 }
-.overlay1{
+.overlay{
     width: 1180px;
     opacity: 1;
     padding-left: 25px;
@@ -186,14 +187,13 @@ html {
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-.img{
+/*.img{
     
     height: 1000px;
-    width: 900px;
+    width: 500px;
     border-style: solid;
     border-color: rgb(5, 125, 105);
-    width: 850px;
-}
+}*/
 .navbar__menu ul {
     background-color: rgb(125, 0, 125);
     padding-left: 0;
