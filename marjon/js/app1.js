@@ -47,15 +47,14 @@ for (let index = 0; index <Array.length; index++) {
             sections.forEach(section => {
                 const elementOffset = offset(section);
         
-                inViewport = () => elementOffset < 250 && elementOffset >= -850;
+                inViewport = () => elementOffset < 6 && elementOffset >= -850;
         
                 removeActive(section);
                 addActive(inViewport(),section);
                 });
         };
-        window.addEventListener("click", activeSection);
-    
-    
+        window.addEventListener("scroll", activeSection);
+
     
     
     
@@ -69,6 +68,7 @@ for (let index = 0; index <Array.length; index++) {
     
     
     };
+
 /*
 const buildNav = () => {
     let navbar__menu = '';
@@ -155,10 +155,9 @@ window.addEventListener("scroll" , function(){
     })
 })**/
 
-//BUILD THE NAVBAR
-
-//buildNav();
-
 //SMOOTH SCROLL TO SECTION
-
+function trackScrolling(){
+    const position = window.pageYOffset;
+    console.log(position);
+}
 //smoothScroll();

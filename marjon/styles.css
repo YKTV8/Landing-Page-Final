@@ -118,8 +118,8 @@ section {
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: min-content;
-    width: 900px;
+    height: 600px;
+    width: 750px;
     background-position-x: right;
 }
 
