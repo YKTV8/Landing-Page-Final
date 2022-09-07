@@ -63,7 +63,7 @@ main {
     padding-top: 3em;
 }
 
-section {
+.section {
     position: relative;
     min-height: 20vh;
 }
@@ -145,9 +145,9 @@ section {
     height: 850px;
     width: 1500px;
 }
-html {
+/*html {
     scroll-behavior: smooth;
-}
+}*/
 .overlay1{
    width: 1180px;
    opacity: .94;
