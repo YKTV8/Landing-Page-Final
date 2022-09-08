@@ -29,8 +29,18 @@ window.addEventListener("scroll", () =>{
         const inView = section.getBoundingClientRect();
         const id = section.getAttribute("id");
         const position = inView.top <= 375 && inView.bottom >= 375;
+        if(position) {
+            section.classList.add("your-active-class");
+            navListUL.querySelector(`[data-id=${id}]`).classList.add('your-active-section');
+        } else{
+            section.classList.remove("your-active-class");
+            navListUL.querySelector(`[data-id=${id}]`).classList.remove('your-active-section');
+        };
+    }));
 
-        const addActive = (conditional, section) => {
+        console.log(scrollY)
+});
+        /*const addActive = (conditional, section) => {
             if(conditional){
             section.classList.add('your-active-section');
             section.style.cssText = "background-color: rgb(15, 200, 125);";
@@ -41,7 +51,7 @@ const removeActive = (section) => {
     section.style.cssText = "background-color: rgb(125, 0, 125);";
         }};
 
-window.addEventListener('scroll', () => {
+/*window.addEventListener('scroll', () => {
     sections.forEach( (section) => {
 
       // getBoundingClientRect() method returns a DOMRect object providing information about the size of an element and its position relative to the viewport.
@@ -51,7 +61,4 @@ window.addEventListener('scroll', () => {
       // section active control
     //console.log(inView);
     });
-});
-
-console.log(scrollY)
-}))});
+});*/

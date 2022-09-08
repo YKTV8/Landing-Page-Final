@@ -173,8 +173,7 @@ main {
     background-color: rgb(125, 0, 125);
     padding-left: 0;
     margin: 0;
-    text-align: left;
-    text-align: center;
+    text-align: justify;
 }
 
 .navbar__menu li {
