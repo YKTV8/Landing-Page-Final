@@ -118,17 +118,10 @@ main {
     opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
+    height: 1200px;
     width: 750px;
-    background-position-x: right;
+    background-position-x:calc(45);
 }
-
-/*.overlay{
-    background-color: rgb(83, 80, 83);;
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}*/
 .overlay1{
     background-color: rgb(125, 0, 125);
     width: 1180px;
@@ -169,15 +162,28 @@ main {
     border-style: solid;
     border-color: rgb(5, 125, 105);
 }*/
+.active{
+    background-color: rgb(12, 200,125);
+}
 .navbar__menu ul {
+    display: flex;
+    align-content: flex-end;
     background-color: rgb(125, 0, 125);
     padding-left: 0;
-    margin: 0;
-    text-align: justify;
+    margin: 10;
+    text-align: center;
+    height: 45px;
+    /*opacity: .80;*/
+    font-style: none;
 }
 
 .navbar__menu li {
     display: inline-block;
+    margin: 10px;
+}
+.navbar__menu a{
+    color: #000;
+    text-decoration: none;
 }
 
 .navbar__menu .menu__link {
@@ -194,8 +200,9 @@ main {
     transition: ease 0.3s all;
 }
 
-.active-section-bg{
-    background: rgb(15, 200, 125);
+.aNavItem_active{
+    /*background: rgb(15, 200, 125);*/
+    background: red;
 }
 
 /* Header Styles */

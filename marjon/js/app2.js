@@ -11,13 +11,12 @@ let section = document.querySelectorAll("section");
             //navBar.insertAdjacentHTML("afterBegin",`<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`);
             navBar.innerHTML = `<a href="#${section.id}" class="menu__link">${section.dataset.nav}</a>`;
             
-            navListUL.append(navBar);
+            navListUL.appendChild(navBar);
             navBar.addEventListener("click", ()=> {
                 section.scrollIntoView({behavior:"smooth"});
             });
         });
     
-      //  navigation.innerHTML = navBar;
     };
 
 buildNav();
