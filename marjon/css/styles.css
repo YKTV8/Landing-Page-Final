@@ -1,8 +1,7 @@
 body {
-    background: url(../images/greenmarjon.jpg);
+    background: url(/marjon/images/greenmarjon.jpg);
     width: 100vw;
     height:100vh;
-    height: 60vh;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,17 +9,8 @@ body {
     font-family: 'Merriweather', serif;
     color: #fff;
 }
-p {
-    display: grid;
-    width:120px;
-    background-color: rgba(25, 165, 17, .85);
-    margin-top: 100px;
-    align-content: right;
-}
-.flex_container{
-    display: block;
-    width: 100vw;
-}
+
+
 /* Typeography General*/
 h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -46,185 +36,145 @@ h2 {
     background-color: rgba(123, 0, 125, .80);
     margin-right: 60%;
 }
+
+p {
+    line-height: 2.1em;
+    color: #eee;
+    background-color: rgba(123, 0, 125, .80);
+    margin-right: 80%;
+    width: 350px;
+    font-size: 1.9em;
+
+}
+
 /* ---- Layout Rules ---- */
 main {
     margin: 10vh 1em 100vh;
-
 }
 .active-section{
-    background-color: rgb(25, 165, 17);
+    background-color: red;
 }
 .main-hero {
     min-height: 40vh;
     padding-top: 3em;
 }
 
-section {
+.section {
     position: relative;
-    min-height: 80vh;
+    min-height: 20vh;
 }
 #section1{
-    background-image: url(/marjon/images/dream2.jpg);
-    opacity: .85;
+    /*background-image: url(../marjon/images/dream2.jpg);*/
+    opacity: .95;
+    background-image: url(../marjon/images/dream2.jpg);
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
-    width: 1100px;
-    background-position-x: left;
-    
+    height: 1000px;
+    width: 1200px;
+    background-position-x: right;
 }
 #section2{
-    background-image: url(/marjon/images/struggle.jpg);
-    opacity: .85;
+    /*background-image: url(../marjon/images/struggle.jpg);*/
+    opacity: .95;
+    background-image: url(../marjon/images/struggle.jpg);
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
-    width: 1100px;
+    height: 1000px;
+    width: 1200px;
     background-position-x: left;
-    
 }
 #section3{
-    background-image: url(/marjon/images/journey4.jpg);
-    opacity: .85;
+    /*background-image: url(../marjon/images/journey4.jpg);*/
+    opacity: .95;
+    background-image: url(../marjon/images/journey4.jpg);
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
-    width: 1100px;
-    background-position-x: left;
-    
+    height: 1000px;
+    width: 1200px;
+    background-position-x: right;
 }
 #section4{
-    background-image: url(/marjon/images/proday2.jpg);
-    opacity: .85;
+    /*background-image: url(../marjon/images/proday2.jpg);*/
+    opacity: .95;
+    background-image: url(../marjon/images/proday2.jpg);
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
-    width: 1100px;
+    height: 1000px;
+    width: 1200px;
     background-position-x: left;
-    
 }
 #section5{
-    background-image: url(/marjon/images/draftday.jpg);
-    opacity: .85;
+    /*background-image: url(../marjon/images/draftday.jpg);*/
+    opacity: .95;
+    background-image: url(../marjon/images/draftday.jpg);
+    opacity: 1;
     background-repeat: no-repeat;
     background-position: top;
-    height: 600px;
-    width: 1100px;
-    background-position-x: left;
-    
+    height: 1200px;
+    width: 750px;
+    background-position-x:calc(45);
 }
-.overlay{
-    background-color: rgb(83, 80, 83);;
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}
-.overlay1{
-    position: relative;
-    width: 50%;
-    background-color: rgb(125, 0, 125);
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-    margin-top: 25px;
-}
-.overlay2{
-    background-color: rgb(83, 80, 83);
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}
-.overlay3{
-    background-color: rgb(125, 0, 125);
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}
-.overlay4{
-    background-color: rgb(83, 80, 83);
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}
-.overlay5{
-    background-color: rgb(125, 0, 125);
-    width: 1000px;
-    opacity: .85;
-    padding-left: 25px;
-}
-
 #section6{
-    background-image: url(/marjon/images/bucks.jpg);
-    opacity: .85;
+    background-image: url(../marjon/images/bucks.jpg);
+    opacity: .90;
     background-repeat: no-repeat;
     background-position: center;
     background-position-y: top;
     background-position: top;
     height: 850px;
-    width: 900px;
+    width: 1500px;
 }
-.container {
-    position: relative;
-    width: 50%;
-  }
-.overlay{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: .5s ease;
+/*html {
+    scroll-behavior: smooth;
+}*/
+.overlay1{
+    background-color: rgb(125, 0, 125);
     width: 1180px;
-    opacity: .85;
+    opacity: .80;
     padding-left: 25px;
-    margin-right: 690px;
 }
 .overlay1{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    width: 0;
-    height: 100%;
-    transition: 1s ease;
-    position: relative;
-    width: 1180px;
-    opacity: .85;
-    padding-left: 25px;
-}
-.container:hover .overlay1 {
-    width: 100%;   
+   width: 1180px;
+   opacity: .94;
+   padding-left: 25px;
+   margin-right: 690px;
 }
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
-.img{
-    display: block;
-    /*width: 100%;
-    height: auto;*/
-    height: 1000px;
-    width: 900px;
-    border-style: solid;
-    border-color: rgb(5, 125, 105);
+.active{
+    background-color: rgb(12, 200,125);
+}
+#navbar__list{
+    align-content: center;
 }
 .navbar__menu ul {
-    /*background-color: rgb(125, 0, 125);*/
+    align-items: center;
+    position: fixed;
+    background-color: rgb(125, 0, 125);
     padding-left: 0;
-    margin: 0;
-    text-align: left;
-    font-size: 25px;
+    margin: 10;
+    text-align: center;
+    height: 45px;
+    font-style: none;
 }
 .navbar__menu li {
     display: inline-block;
+    margin: 10px;
+    
+}
+.navbar__menu li a{
+    color: #000;
+    text-decoration: none;
 }
 
 .navbar__menu .menu__link {
     display: block;
-    background: rgb(125, 0, 125);
-    padding: 2em;
+    padding: 1em;
     font-weight: bold;
     text-decoration: none;
     color: #000;
@@ -236,6 +186,9 @@ section {
     transition: ease 0.3s all;
 }
 
+.aNavItem_active{
+    background: rgb(15, 200, 125);
+}
 /* Header Styles */
 .page1_header {
     position: fixed;
@@ -250,6 +203,7 @@ section {
     padding: 3em;
     color: #fff;
     width: 100%;
+    min-height: auto;
 }
 
 .page__footer p{
@@ -283,7 +237,7 @@ section:nth-of-type(even) .landing__container {
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 section:nth-of-type(odd) .landing__container::before {
     content: '';
-    background: rgba(15, 200, 125, 0.187);
+    background: rgba(255, 255, 255, 0.187);
     position: absolute;
     z-index: -5;
     width: 20vh;
@@ -296,7 +250,7 @@ section:nth-of-type(odd) .landing__container::before {
 section:nth-of-type(even) .landing__container::before {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -311,7 +265,7 @@ section:nth-of-type(even) .landing__container::before {
 section:nth-of-type(3n) .landing__container::after {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -326,7 +280,7 @@ section:nth-of-type(3n) .landing__container::after {
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
     background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(15, 200, 125,.1) 0%, rgba(15, 200, 125,.2) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -343,8 +297,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(15, 200, 125);
-    /*background: linear-gradient(0deg, rgba(15, 200, 125, 0.1) 0%, rgba(15, 200, 125, 0) 100%);*/
+    background: linear-gradient(0deg, rgba(15, 200, 125, 0.1) 0%, rgba(15, 200, 125, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
