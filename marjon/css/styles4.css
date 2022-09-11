@@ -64,7 +64,6 @@ main {
     min-height: 20vh;
 }
 #section1{
-    /*background-image: url(../marjon/images/dream2.jpg);*/
     opacity: .95;
     background-image: url(../images/dream2.jpg);
     opacity: 1;
@@ -75,7 +74,6 @@ main {
     background-position-x: right;
 }
 #section2{
-    /*background-image: url(../marjon/images/struggle.jpg);*/
     opacity: .95;
     background-image: url(../images/struggle.jpg);
     opacity: 1;
@@ -86,7 +84,6 @@ main {
     background-position-x: left;
 }
 #section3{
-    /*background-image: url(../marjon/images/journey4.jpg);*/
     opacity: .95;
     background-image: url(../images/journey4.jpg);
     opacity: 1;
@@ -97,7 +94,6 @@ main {
     background-position-x: right;
 }
 #section4{
-    /*background-image: url(../marjon/images/proday2.jpg);*/
     opacity: .95;
     background-image: url(../images/proday2.jpg);
     opacity: 1;
@@ -108,7 +104,6 @@ main {
     background-position-x: left;
 }
 #section5{
-    /*background-image: url(../marjon/images/draftday.jpg);*/
     opacity: .95;
     background-image: url(../images/draftday.jpg);
     opacity: 1;
@@ -131,18 +126,18 @@ main {
 /*html {
     scroll-behavior: smooth;
 }*/
-.overlay1{
+.section{
     background-color: rgb(125, 0, 125);
     width: 1180px;
     opacity: .80;
     padding-left: 25px;
 }
-.overlay1{
+/*.overlay1{
    width: 1180px;
    opacity: .94;
    padding-left: 25px;
    margin-right: 690px;
-}
+}*/
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
@@ -195,8 +190,9 @@ main {
 
 /* Footer Styles */
 .page__footer {
+    margin: 0;
     background: rgb(125, 0, 125);
-    padding: 3em;
+    padding: 0em;
     color: #fff;
     width: 100%;
     min-height: auto;

@@ -10,12 +10,13 @@
 //Grabs unordered list from the page
 const sections = document.querySelectorAll('section');
 //Grabs sections from the page
+const navBar = document.querySelector (".navbar__menu");
 const navListUL = document.getElementById('navbar__list');
 //
 let topOfSections = [];
 //Section position - coded example from Rockwell. window.pageYOffset and if statement provided in walkthrough video
 function getSectionPositions(){
-    const footerTopPosition = document.querySelectorAll('page__footer');
+    const footerTopPosition = document.getElementsByClassName('page__footer');
     for(let index = 0 ; index < sections.length; index++){
     let topPos = sections[index].getBoundingClientRect().top + window.pageYOffset;
     topOfSections[index] = topPos;
@@ -23,19 +24,20 @@ function getSectionPositions(){
         topOfSections[index + 1] = footerTopPosition;
     };
     };
-    
-    console.log(topOfSections);
+   // console.log(topOfSections);
 };
 //for loop creating active section removes active section style prior to passing thru
 function activeSection(){
     for(let index = 0 ; index < sections.length; index++) {
-        const anchorTags = document.getElementsByTagName('a');
+        const tagName = document.getElementsByTagName('a');
         sections[index].classList.remove('your-active-class');
-        anchorTags[index].classList.remove('active');
+        tagName[index].classList.remove('active');
     };
+    //console.log(activeSection);
 };
 //For loop to dynamically building navbar using for loop. 
 function buildNav(){
+    
     for(let index = 0 ; index < sections.length; index++) {
         const navMenu = document.getElementById('navbar__list');
         const liNavItem = document.createElement('li');
@@ -53,7 +55,7 @@ function buildNav(){
         navMenu.append(liNavItem);
         //console.log(liNavItem)
         //Click event listener add for activation of activeSection function of navbar
-        aNavItem.addEventListener('click', function(event) {
+        aNavItem.addEventListener('click',function(event) {
             event.preventDefault();
             const sectionId = event.target.getAttribute('data-id');
             const sectionInViewport = document.getElementById(sectionId);
@@ -79,11 +81,11 @@ function trackScrolling() {
             tagName[index].classList.add('active');
         };
     };
-    console.log(positionY);
+  //  console.log(trackScrolling);
 };
 buildNav();
 getSectionPositions();
-window.addEventListener('scroll', trackScrolling);
+window.addEventListener('scroll', trackScrolling());
 
 /*() =>{
     for(let index = 0 ; index < sections.length; index++) {
