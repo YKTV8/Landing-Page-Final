@@ -46,6 +46,14 @@ function buildNav(){
         });
     };
 };
+
+function removeActiveSection(){
+    for(let index = 0 ; index < sections.length; index++) {
+        const anchorTags = document.getElementsByTagName('a');
+        sections[index].classList.remove('your-active-class');
+        anchorTags[index].classList.remove('active');
+    };
+};
 //Brings the current section to the TOP of inViewport
 function activeSection (){
     window.addEventListener('scroll', function() {
@@ -60,6 +68,7 @@ function activeSection (){
 			
 					let currentSect = document.getElementsByClassName("active");  
 						if (currentSect.length > 0) {
+							removeActiveSection();
 							currentSect[0].className = currentSect[0].className.replace(" active", "");
 						}
 			
