@@ -46,7 +46,7 @@ function buildNav(){
         });
     };
 };
-
+//function created to remove active section as scroll and click occurs
 function removeActiveSection(){
     for(let index = 0 ; index < sections.length; index++) {
         const anchorTags = document.getElementsByTagName('a');
