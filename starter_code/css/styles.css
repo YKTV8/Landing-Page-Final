@@ -79,8 +79,9 @@ section {
     margin-right: 20px;
 }
 .navbar__menu li a{
-    color: #cc1;
+    color: #ccc;
     text-decoration: none;
+    background-color: rgb(20, 105, 0);
 }
 .navbar__menu .menu__link {
     display: block;
@@ -196,7 +197,9 @@ section:nth-of-type(3n + 1) .landing__container::after {
     opacity: 0;
     transition: ease 0.5s all;
 }
-
+ html{
+    scroll-behavior: 'smooth';
+ }
 
 /* ---- Theme State Rules ---- */
 /* Section Active Styles */
