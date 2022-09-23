@@ -1,5 +1,5 @@
 body {
-    background: url(/marjon/images/greenmarjon.jpg);
+    background: url(../images/greenmarjon.jpg);
     width: 100vw;
     height:100vh;
     background-attachment: fixed;
@@ -27,7 +27,9 @@ h1 {
         margin: 2em 4rem 1em;
     }
 }
-
+body{
+    display: block;
+}
 h2 {
     border-bottom:var(50%) white;
     font-family: 'Oxygen', Sans-Serif;
@@ -62,6 +64,8 @@ main {
 .section {
     position: relative;
     min-height: 20vh;
+    margin: 400px 0px 300px 0px;
+    /*margin-bottom: 300px;*/
 }
 #section1{
     opacity: .95;
@@ -111,7 +115,7 @@ main {
     background-position: top;
     height: 1200px;
     width: 750px;
-    background-position-x:calc(45);
+    background-position-x:left;
 }
 #section6{
     background-image: url(../images/bucks.jpg);
@@ -132,12 +136,6 @@ main {
     opacity: .80;
     padding-left: 25px;
 }
-/*.overlay1{
-   width: 1180px;
-   opacity: .94;
-   padding-left: 25px;
-   margin-right: 690px;
-}*/
 /* ---- Module Rules ---- */
 
 /* Navigation Styles*/
@@ -241,7 +239,7 @@ section:nth-of-type(odd) .landing__container::before {
 
 section:nth-of-type(even) .landing__container::before {
     content: '';
-    background: rgb(255,255,255);
+    background: rgb(12, 200,125);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     top: 3em;
@@ -256,7 +254,7 @@ section:nth-of-type(even) .landing__container::before {
 
 section:nth-of-type(3n) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
+    background: rgb(12, 200,125);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 0;
@@ -271,7 +269,7 @@ section:nth-of-type(3n) .landing__container::after {
 
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
+    background: rgb(12, 200,125);
     background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
     position: absolute;
     right: 20vw;
