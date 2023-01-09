@@ -101,6 +101,7 @@ function activeNavBar (){
             };
  		});
 	};
+    //console.log(actSect)
 };
 //**SOURCE: https://www.delftstack.com/howto/javascript/scrollevent-in-javscript/#:~:text=We%20can%20use%20scroll%20event%20Listeners%20to%20listen,console.log%28scrollX%29%3B%20%7D%29%3B%20The%20this%20signifies%20the%20window%20object.
 //scrolling event function created to give indication of when one section is active and another is inactive.
