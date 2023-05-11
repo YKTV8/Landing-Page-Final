@@ -197,7 +197,7 @@ main {
     background: rgb(125, 0, 125);
     padding: 0em;
     color: #fff;
-    width: 100vw;
+    width: 100%;
     min-height: auto;
 }
 
