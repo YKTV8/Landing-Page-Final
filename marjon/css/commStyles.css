@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: lavender;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header{
+
+}
+nav{
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.navBar ul{
+    text-decoration: none;
+    margin: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.navBar ul li{
+    list-style-type: none;
+    padding: 2%;
+}
+.navBar a{
+    color: green;
+    text-decoration: none;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: fit-content;
+    margin-bottom: 5%;
+}
+section p{
+    display: flex;
+    
+}
+.imageBoxes {
+    display: flex;
+    flex-direction: row;
+}
+.imageBox{
+    flex-wrap: wrap;
+    height: 400px;
+    width: 250px;
+    border: white 4px solid;
+    background-size: cover;
+    background-image: url(/marjon/images/294964521_5035711726537527_859476851761182307_n.jpg);
+}
+.imageBox p{
+    flex-wrap: wrap;
+}
+.imageBox1{
+    height: 400px;
+    width: 250px;
+    border: white 4px solid;
+    background-size: cover;
+    background-image: url(/marjon/images/294964521_5035711726537527_859476851761182307_n.jpg);
+}
+.imageBox2{
+    height: 400px;
+    width: 250px;
+    border: white 4px solid;
+    background-size: cover;
+    background-image: url(/marjon/images/294964521_5035711726537527_859476851761182307_n.jpg);
+}
+article{
+    display: inline-block;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    width: 50vw;
+    text-align: center;
+}

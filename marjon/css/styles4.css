@@ -26,6 +26,22 @@ h1 {
     margin: 1em 1rem;
 }
 
+.readMore{
+    color: rgb(12, 200,125);
+    background-color: rgb(12, 200,125);
+    width: fit-content;
+    font-size: 2rem;
+}
+.readMore a{
+    text-decoration: none;
+    color: rgb(125, 0, 125);
+}
+.readMore a:hover{
+    font-size: 2.1rem;
+    transition: 1s;
+    color: rgb(12, 200,125);
+    background-color: rgb(125, 0, 125);
+}
 @media only screen and (min-width: 35em){
     h1 {
         font-size: 7em;
