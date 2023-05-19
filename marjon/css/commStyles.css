@@ -1,6 +1,6 @@
+/* Styles for all HTML pages - Pseudo code for variation will be commented for each */
 *{
     box-sizing: border-box;
-    padding: 0;
     margin: 0;
 }
 body{
@@ -105,10 +105,19 @@ section p{
     background-image: url(/marjon/images/274533498_125634743348835_4317910320886187256_n.jpg);
 }
 article{
+    border: 8px solid rgba(155, 19, 91, 0.5);
+    border-radius: 15px;
     display: inline-block;
     flex-direction: column;
     justify-items: center;
     align-items: center;
     width: 50vw;
     text-align: center;
+}
+article p{
+    padding: 0 5%;
+}
+/* article1 thru article7 styles */
+.article1, .article2, .article3, .article4, .article5, .article6, .article7{
+    padding-bottom:5%;
 }
